@@ -1,4 +1,3 @@
-package Java.Games;
 import java.util.*;
 
 public class RockPaperScissor {
