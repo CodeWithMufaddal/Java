@@ -1,43 +1,31 @@
-// Rock Paper Scissor Game
-
+package Java.Games;
 import java.util.*;
 
-// ================= Simple understanding Way =======================
 public class RockPaperScissor {
    public static void main(String[] args) {
-
-      System.out.println(" ======= For Rock: 1 , Paper: 2 , Scissor: 3 =======\n");
       Scanner sc = new Scanner(System.in);
-
-      
-      System.out.print("\nEnter Your guess: ");
-      int userInput = sc.nextInt();
-
+      System.out.print("\nEnter Your Guess: ");
+      int UserInput = sc.nextInt();
       Random rand = new Random();
-      int ComputerNumber = rand.nextInt(3);
-
-      // If condition between draw win and lose
-      if (userInput == ComputerNumber) {
-         System.out.println("\nDraw");
-      } else if (userInput == 0 && ComputerNumber == 2 ||
-            userInput == 2 && ComputerNumber == 1 ||
-            userInput == 1 && ComputerNumber == 0
-
-      ) {
-         System.out.println("\n You Win!");
-
+      int ComputerInput = rand.nextInt(3);
+      System.out.println();
+      if (UserInput == ComputerInput) {
+         System.out.println("draw");
+      } else if (UserInput == 0 && ComputerInput == 2 ||
+            UserInput == 2 && ComputerInput == 1 ||
+            UserInput == 1 && ComputerInput == 0) {
+         System.out.println("You Win!");
       } else {
-         System.out.println("\nComputer Win ");
+         System.out.println("Computer Win!");
       }
 
-      // What computer number is
-      System.out.printf("\nComputer Choose: %d ", ComputerNumber);
+      System.out.println("\nComputer Choose: " + ComputerInput);
 
    }
-
 }
 
-// ================= GUI Way =======================
+// ================= GUI Way (Same Thing but some additional features
+// )=======================
 
 // public class RockPaperScissor {
 // public static void main(String[] args) {
